@@ -1,3 +1,57 @@
+
+		function register(e){
+			e.preventDefault();
+			
+			var name = document.getElementById('name').value;
+            var lname = document.getElementById('lname').value;
+
+			var email = document.getElementById('email').value;
+			
+			if(name == '' || email == '' || lname == ''){
+				msg.className="alert alert-danger";
+				msg.innerHTML = 'Please fill out all fields';
+			} else {
+				if(lname+name.length < 3){
+					msg.className="alert alert-danger";
+					msg.innerHTML = 'Name must be at least 3 characters';
+				} else {
+					var atpos = email.indexOf("@");
+					var dotpos = email.lastIndexOf(".");
+					if(atpos < 1 || dotpos < atpos+2 || dotpos+2 >= email.length){
+						msg.className="alert alert-danger";
+						msg.innerHTML = 'Please use valid email';
+					} else {
+						if(password != password2){
+							msg.className="alert alert-danger";
+							msg.innerHTML = 'Passwords do not match';
+						} else {
+							// Success
+							msg.className="alert alert-success";
+							msg.innerHTML = name+' is registered with email '+ email;
+						}
+					}
+				}
+			}		
+		}
+
+		document.getElementById('regForm').addEventListener('submit', register, false);
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 jQuery(document).ready(function($) {
   "use strict";
 
