@@ -13,13 +13,14 @@
 
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
-position: absolute;
-left: -30%;  
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-70%);
-      transition: all 0.3s ease;
-
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0px; top: 10%; bottom: 50%;
+    transform: translateY(100%);
+    transform: translateX(-80%);
+    padding-left: 40%;
+    padding-right: 50%;
+    margin-bottom: -65%;
 }
 
 /* Style the icon bar links */
