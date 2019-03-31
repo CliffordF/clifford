@@ -18,9 +18,10 @@
     left: 0px; top: 10%; bottom: 50%;
     transform: translateY(100%);
     transform: translateX(-80%);
-    padding-left: 40%;
+    padding-left: 88px;
     padding-right: 50%;
     margin-bottom: -65%;
+    margin-left: 100px; 
 }
 
 /* Style the icon bar links */
